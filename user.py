@@ -17,9 +17,22 @@ class Person:
            print("password cannot be less than 8 characters")
       else:
            print("account created succesfully")
-        
 
-p1 = Person("John", 36)
+  def cc(self):
+      q = input("enter your username:")  
+      w = input("enter your password:")
+      if q == y[0] and w == y[1]:
+          print("access granted")
+          if q != y[0] and w == y[1]:
+              print("wrong username") 
+              if q == y[0] and w != y[1]:
+                  print("wrong password")
+                  if q != y[0] and q != y[1]:
+                      print("wrong username and password")
+                  else:
+                      print("access granted")    
+
+p1 = Person("","")
 
 p1.aa()
-p1.bb()
+
