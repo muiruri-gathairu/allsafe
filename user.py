@@ -15,7 +15,7 @@ class Users:
      @classmethod
      def find_by_password(cls,username,password):
     
-        current_user = ''
+        current_user = ""
         for user in cls.aa:
              if user.username == username and user.password == password:
                 current_user = user.username
