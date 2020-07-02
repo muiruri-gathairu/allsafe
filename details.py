@@ -26,9 +26,16 @@ class Details:
         def save_details(self):
                 Details.bb.append(self)         
 
-        def generate_password(self, size=8, char=string.ascii_uppercase+string.ascii_lowercase+string.digits):
+        def eight_char_password(self, size=8, char=string.ascii_uppercase+string.ascii_lowercase+string.digits):
                 '''
 		            Function to generate an 8 character password for a credential
 		            '''
-                gen_pass=''.join(random.choice(char) for _ in range(size))
-                return gen_pass                             
+                eight_char=''.join(random.choice(char) for _ in range(size))
+                return eight_char                            
+
+        def eleven_char_password(self, size=11, char=string.ascii_uppercase+string.ascii_lowercase+string.digits):
+                '''
+		            Function to generate an 8 character password for a credential
+		            '''
+                eleven_char=''.join(random.choice(char) for _ in range(size))
+                return eleven_char                                           
