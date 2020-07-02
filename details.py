@@ -56,22 +56,18 @@ class Details:
                 return details.sitename == sitename
               
         @classmethod
-        def display_account(cls, site_name):
+        def display_account(cls, sitename):
                 '''
-                method that returns the credetial list
+                method that returns the detail list
                 '''
-                for credential in cls.credentials_list:
-                   if credential.site_name == site_name:
-                       return (f"Site:{credential.site_name} \n Use Name:{credential.account_user_name} \n Password:{credential.password}")
+                for detail in cls.bb:
+                   if detail.sitename == sitename:
+                       return (f"Site:{detail.site_name} \n Use Name:{detail.account_user_name} \n Password:{detail.password}")
                  
         
         @classmethod
-        def find_by_site_name(cls, site_name):
-         for credentials in cls.credentials_list:
-             if credentials.site_name == site_name:
-                 return credentials
+        def find_by_site_name(cls, sitename):
+         for details in cls.bb:
+             if details.sitename == sitename:
+                 return details
 
-        @classmethod
-        def copy_credentials(cls, site_name):
-            credentials_found = Credentials.find_by_site_name(site_name)
-            return pyperclip.copy(credentials_found.password)
