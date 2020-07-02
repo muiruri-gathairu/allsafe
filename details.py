@@ -4,7 +4,7 @@ import random
 
 class Details:
 
-        bb = []  # Empty credentials list
+        bb = []  # Empty details list
 
         @classmethod
         def check_user(cls, username, password):
@@ -28,14 +28,14 @@ class Details:
 
         def eight_char_password(self, size=8, char=string.ascii_uppercase+string.ascii_lowercase+string.digits):
                 '''
-		            Function to generate an 8 character password for a credential
+		            Function to generate an 8 character password for a detail
 		            '''
                 eight_char=''.join(random.choice(char) for _ in range(size))
                 return eight_char                            
 
         def eleven_char_password(self, size=11, char=string.ascii_uppercase+string.ascii_lowercase+string.digits):
                 '''
-		            Function to generate an 11 character password for a credential
+		            Function to generate an 11 character password for a detail
 		            '''
                 eleven_char=''.join(random.choice(char) for _ in range(size))
                 return eleven_char                                           
