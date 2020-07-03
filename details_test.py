@@ -24,4 +24,14 @@ class TestDetails(unittest.TestCase):
         found_details = Details.find_by_username("Naf")
         self.assertEqual(found_details.username, test_details.username)      
            
-        
+    def test_delete_credentials(self):
+            '''
+            test_delete_contact to test if we can remove a contact from our contact list
+            '''
+            self.new_credentials.save_credentials()
+            test_credentials = Credentials("James","123456") # new contact
+            test_credentials.save_credentials()
+
+            self.new_credentials.delete_credentials()# Deleting a contact object
+            self.assertEqual(len(Credentials.credentials_list),1)
+              
