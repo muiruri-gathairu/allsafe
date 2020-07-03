@@ -14,7 +14,7 @@ class TestUser(unittest.TestCase):
         self.assertEqual(self.aa.username, "Naf")
         self.assertEqual(self.aa.password, "12345678")     
 
-    def test_save_user(self):
+    def test_save_user(self):c
 
         self.aa.login()
         self.assertEqual(len(Users.aa), 1)           

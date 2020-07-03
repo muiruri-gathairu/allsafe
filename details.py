@@ -28,14 +28,14 @@ class Details:
 
         def eight_char_password(self, size=8, char=string.ascii_uppercase+string.ascii_lowercase+string.digits):
                 '''
-		            Function to generate an 8 character password for a detail
+		            Function to generate an 8 character password for site details
 		            '''
                 eight_char=''.join(random.choice(char) for _ in range(size))
                 return eight_char                            
 
         def eleven_char_password(self, size=11, char=string.ascii_uppercase+string.ascii_lowercase+string.digits):
                 '''
-		            Function to generate an 11 character password for a detail
+		            Function to generate an 11 character password for site details
 		            '''
                 eleven_char=''.join(random.choice(char) for _ in range(size))
                 return eleven_char                                           
@@ -51,9 +51,9 @@ class Details:
                          return details
 
         @classmethod
-        def details_found(cls, sitename):
-            for details in cls.bb:
-                return details.sitename == sitename
+        def details_found(cls, site_name):
+            for detail in cls.bb:
+                return detail.site_name == site_name
               
         @classmethod
         def display_account(cls, sitename):
@@ -62,12 +62,12 @@ class Details:
                 '''
                 for detail in cls.bb:
                    if detail.sitename == sitename:
-                       return (f"Site:{detail.site_name} \n Use Name:{detail.account_user_name} \n Password:{detail.password}")
+                       return (f"Site:{detail.sitename} \n Use Name:{detail.account_username} \n Password:{detail.password}")
                  
         
         @classmethod
-        def find_by_sitename(cls, sitename):
+        def find_by_sitename(cls, site_name):
          for details in cls.bb:
-             if details.sitename == sitename:
+             if details.site_name == site_name:
                  return details
 
