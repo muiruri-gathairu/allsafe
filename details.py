@@ -4,7 +4,7 @@ import random
 
 class Details:
 
-        bb = []  # Empty details list
+        bb = [] 
 
         @classmethod
         def check_user(cls, username, password):
