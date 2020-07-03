@@ -66,7 +66,7 @@ class Details:
                  
         
         @classmethod
-        def find_by_site_name(cls, sitename):
+        def find_by_sitename(cls, sitename):
          for details in cls.bb:
              if details.sitename == sitename:
                  return details
